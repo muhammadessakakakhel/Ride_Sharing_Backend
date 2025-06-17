@@ -15,8 +15,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
     raise ValueError("DATABASE_URL environment variable is not set")
 
-# Hardcode the DATABASE_URL temporarily
-# DATABASE_URL = "postgresql://postgres:987654321@localhost:5432/Ride_Sharing_App"
+
 engine = create_engine(
     DATABASE_URL,
     pool_pre_ping=True,
