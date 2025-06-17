@@ -18,7 +18,8 @@ class Driver(Base):
     vehicle = relationship("Vehicle", back_populates="driver")
     current_location = relationship("CurrentDriverLocation", back_populates="driver", uselist=False)
     location_history = relationship("DriverLocationHistory", back_populates="driver")
-
+    pre_scheduled_trips = relationship("PreScheduledTrip", back_populates="driver")
+    
 class CurrentDriverLocation(Base):
     __tablename__ = "current_driver_locations"
     

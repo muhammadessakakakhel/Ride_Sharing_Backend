@@ -2,6 +2,7 @@ from .driver import Driver, CurrentDriverLocation, DriverLocationHistory
 from .vehicle import Vehicle, VehicleType
 from .passenger import Passenger
 from .ride_request import RideRequest
+from .pre_scheduled_trip import PreScheduledTrip, TripBooking, Package, TripStop
 
 __all__ = [
     "Driver",
@@ -10,5 +11,9 @@ __all__ = [
     "Vehicle",
     "VehicleType",
     "Passenger",
-    "RideRequest"
+    "RideRequest",
+    "PreScheduledTrip",
+    "TripBooking", 
+    "Package",
+    "TripStop"
 ]

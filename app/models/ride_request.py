@@ -3,6 +3,8 @@ from sqlalchemy.dialects.postgresql import JSON
 from geoalchemy2 import Geometry
 from app.config.database import Base
 import datetime
+from sqlalchemy.orm import relationship
+
 
 class RideRequest(Base):
     __tablename__ = "ride_requests"
@@ -24,3 +26,7 @@ class RideRequest(Base):
     estimated_duration = Column(Float)
     estimated_fare = Column(Float)
     feature_preferences = Column(JSON)
+
+
+    # In the RideRequest class, add:
+trip_bookings = relationship("TripBooking", back_populates="ride_request")
